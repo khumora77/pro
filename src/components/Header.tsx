@@ -1,19 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Coffee, Menu as MenuIcon, X } from 'lucide-react';
+import { navlink } from '../constants';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCoffeeMenuOpen, setIsCoffeeMenuOpen] = useState(false);
   const location = useLocation();
 
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Locations', href: '/locations' },
-    { name: 'News', href: '/news' },
-    { name: 'Contact', href: '/contact' },
-  ];
+
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -21,20 +16,18 @@ const Header = () => {
     <header className="bg-coffee-900 text-cream-50 sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <Coffee className="h-8 w-8 text-gold-400" />
             <span className="text-xl font-bold">Brewhaus</span>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
+            {navlink.map((item) => (
               <Link
                 key={item.name}
-                to={item.href}
+                to={item.route}
                 className={`text-sm font-medium transition-colors hover:text-gold-400 ${
-                  isActive(item.href) ? 'text-gold-400' : 'text-cream-50'
+                  isActive(item.route) ? 'text-gold-400' : 'text-cream-50'
                 }`}
               >
                 {item.name}
