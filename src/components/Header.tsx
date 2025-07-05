@@ -11,7 +11,10 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-[#1d4e1a] text-cream-50 sticky top-0 z-50">
+    <header className="bg-[#1d4e1a] text-cream-50 sticky top-0 z-50 relative overflow-hidden rounded-b-[100px] shadow-md">
+      {/* iPhone-style Notch */}
+      <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-20 h-4 bg-[#0f2910] rounded-b-full z-40 shadow-inner shadow-black/30" />
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
