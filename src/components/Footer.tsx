@@ -1,20 +1,28 @@
-import React from 'react';
-import { Coffee, MapPin, Phone, Mail, Instagram, Facebook, Twitter } from 'lucide-react';
+import React from "react";
+import {
+  Coffee,
+  MapPin,
+  Phone,
+  Mail,
+  Instagram,
+  Facebook,
+  Twitter,
+} from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-coffee-900 text-cream-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo & Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <Coffee className="h-8 w-8 text-gold-400" />
               <span className="text-xl font-bold">Brewhaus</span>
             </div>
             <p className="text-cream-200 mb-4 max-w-md">
-              Crafting exceptional coffee experiences since 2015. We source the finest beans 
-              from around the world and roast them to perfection in our local roastery.
+              Crafting exceptional coffee experiences since 2015. We source the
+              finest beans from around the world and roast them to perfection in
+              our local roastery.
             </p>
             <div className="flex space-x-4">
               <Facebook className="h-5 w-5 text-cream-200 hover:text-gold-400 cursor-pointer transition-colors" />
@@ -23,13 +31,14 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-gold-400" />
-                <span className="text-cream-200 text-sm">123 Coffee Street, Bean City</span>
+                <span className="text-cream-200 text-sm">
+                  123 Coffee Street, Bean City
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-gold-400" />
@@ -37,12 +46,13 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-gold-400" />
-                <span className="text-cream-200 text-sm">hello@brewhaus.com</span>
+                <span className="text-cream-200 text-sm">
+                  hello@brewhaus.com
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Hours */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Hours</h3>
             <div className="space-y-2 text-cream-200 text-sm">
@@ -64,7 +74,8 @@ const Footer = () => {
 
         <div className="border-t border-coffee-800 mt-8 pt-8 text-center">
           <p className="text-cream-200 text-sm">
-            © 2024 Brewhaus Coffee. All rights reserved. Made with ❤️ and lots of coffee.
+            © 2024 Brewhaus Coffee. All rights reserved. Made with ❤️ and lots
+            of coffee.
           </p>
         </div>
       </div>

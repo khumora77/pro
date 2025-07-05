@@ -9,18 +9,19 @@ const Header = () => {
   const location = useLocation();
 
 
-
   const isActive = (path: string) => location.pathname === path;
 
   return (
     <header className="bg-coffee-900 text-cream-50 sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+          {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <Coffee className="h-8 w-8 text-gold-400" />
             <span className="text-xl font-bold">Brewhaus</span>
           </Link>
 
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navlink.map((item) => (
               <Link
@@ -59,13 +60,13 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-coffee-800 py-4">
             <nav className="flex flex-col space-y-2">
-              {navigation.map((item) => (
+              {navlink.map((item) => (
                 <Link
                   key={item.name}
-                  to={item.href}
+                  to={item.route}
                   onClick={() => setIsMenuOpen(false)}
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    isActive(item.href)
+                    isActive(item.route)
                       ? 'text-gold-400 bg-coffee-800'
                       : 'text-cream-50 hover:bg-coffee-800'
                   }`}
