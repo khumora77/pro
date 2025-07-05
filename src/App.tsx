@@ -13,7 +13,7 @@ function App() {
     <Router>
       <div className="min-h-screen bg-cream-50">
         <Header />
-     
+
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

@@ -10,6 +10,7 @@ import {
   Shield,
 } from "lucide-react";
 import Hero from "../components/hero/HeroSection";
+import CoffeeShop from "./CoffeeShop";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <div className="overflow-hidden">
         {/* Hero Section */}
         <Hero />
+        <CoffeeShop />
         {/* Features Section */}
         <section className="py-20 bg-cream-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
