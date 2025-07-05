@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import axios from "axios";
 
 // Coffee type
-interface Coffee {
+interface CoffeeApp {
   id: number;
   name: string;
   type: string;
