@@ -1,0 +1,58 @@
+{
+  "coffees": [
+    {
+      "id": 1,
+      "name": "Espresso",
+      "type": "Strong",
+      "origin": "Italy",
+      "price": 12000,
+      "description": "Kichik hajmli, kuchli qahva. Konsentratsiyasi yuqori.",
+      "image": "/images/espresso.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Cappuccino",
+      "type": "Milk",
+      "origin": "Italy",
+      "price": 15000,
+      "description": "Espresso va bug‘langan sut bilan aralashtirilgan klassik qahva.",
+      "image": "/images/cappuccino.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Latte",
+      "type": "Milk",
+      "origin": "France",
+      "price": 16000,
+      "description": "Sutli, yumshoq va shirin ta’mli qahva. Nonushta uchun ideal.",
+      "image": "/images/latte.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Americano",
+      "type": "Black",
+      "origin": "USA",
+      "price": 13000,
+      "description": "Suv bilan suyultirilgan espresso. Yengil ichimlik.",
+      "image": "/images/americano.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Mocha",
+      "type": "Chocolate",
+      "origin": "Yemen",
+      "price": 17000,
+      "description": "Qahva, shokolad va sut aralashmasidan iborat shirin ichimlik.",
+      "image": "/images/mocha.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Flat White",
+      "type": "Milk",
+      "origin": "Australia",
+      "price": 15500,
+      "description": "Lattega o‘xshash, ammo ko‘proq qahva kamroq sut bilan tayyorlanadi.",
+      "image": "/images/flatwhite.jpg"
+    }
+  ]
+}
