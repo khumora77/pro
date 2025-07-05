@@ -35,8 +35,17 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Coffee Menu Button & Mobile Menu Button */}
+          {/* Sign In, Coffee Menu & Mobile Menu Buttons */}
           <div className="flex items-center space-x-4">
+            {/* Sign In Button */}
+            <Link
+              to="/signin"
+              className="bg-transparent border border-gold-400 text-gold-400 hover:bg-gold-500 hover:text-coffee-900 px-4 py-2 rounded-lg font-medium transition-colors"
+            >
+              Sign In
+            </Link>
+
+            {/* Coffee Menu Button */}
             <button
               onClick={() => setIsCoffeeMenuOpen(!isCoffeeMenuOpen)}
               className="bg-gold-500 hover:bg-gold-600 text-coffee-900 px-4 py-2 rounded-lg font-medium transition-colors flex items-center space-x-2"
