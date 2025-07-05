@@ -18,23 +18,28 @@ export default function Menyu() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("All");
 
-  // Fetch data from db.json (json-server)
+  // Fetch data from db.json
   useEffect(() => {
-    axios.get("http://localhost:3000/coffees").then((res) => {
-      setCoffees(res.data);
-    });
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("http://localhost:3000/coffees");
+        setCoffees(res.data);
+      } catch (error) {
+        console.error("Ma'lumot yuklanmadi:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
-  // Unique types for filtering dropdown
-  const types = ["All", ...new Set(coffees.map((coffee) => coffee.type))];
+  const types = ["All", ...new Set(coffees.map((c) => c.type))];
 
-  // Filtering and searching logic
   const filteredCoffees = coffees.filter((coffee) => {
-    const matchesSearch = coffee.name
+    const matchSearch = coffee.name
       .toLowerCase()
       .includes(search.toLowerCase());
-    const matchesFilter = filter === "All" || coffee.type === filter;
-    return matchesSearch && matchesFilter;
+    const matchFilter = filter === "All" || coffee.type === filter;
+    return matchSearch && matchFilter;
   });
 
   return (
@@ -66,15 +71,16 @@ export default function Menyu() {
         </select>
       </div>
 
-      {/* Cards */}
+      {/* Coffee Cards */}
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredCoffees.map((coffee, index) => (
           <motion.div
             key={coffee.id}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.05 }}
-            className="bg-white rounded-2xl shadow hover:shadow-lg transition p-4"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: index * 0.07 }}
+            className="bg-white rounded-2xl shadow-md hover:shadow-lg transition p-4"
           >
             <img
               src={coffee.image}
