@@ -229,10 +229,10 @@ const Locations = () => {
 
                   {/* Action Buttons */}
                   <div className="flex space-x-3">
-                    <button className="flex-1 bg-coffee-900 text-cream-50 py-3 rounded-lg hover:bg-coffee-800 transition-colors font-medium">
+                    <button className="flex-1 bg-[#1d4e1a] text-cream-50 py-3 rounded-lg hover:bg-coffee-800 transition-colors font-medium">
                       Get Directions
                     </button>
-                    <button className="flex-1 border-2 border-coffee-900 text-coffee-900 py-3 rounded-lg hover:bg-[#1d4e1a] hover:text-cream-50 transition-colors font-medium">
+                    <button className="flex-1 border-2 border-[#1d4e1a] text-coffee-900 py-3 rounded-lg hover:bg-[#1d4e1a] hover:text-cream-50 transition-colors font-medium">
                       Call Store
                     </button>
                   </div>
