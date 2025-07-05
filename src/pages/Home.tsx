@@ -179,7 +179,7 @@ const Home = () => {
                     <span className="text-2xl font-bold text-gold-600">
                       {product.price}
                     </span>
-                    <button className="bg-coffee-900 text-cream-50 px-4 py-2 rounded-lg hover:bg-coffee-800 transition-colors">
+                    <button className="bg-[#1d4e1a] text-cream-50 px-4 py-2 rounded-lg opacity-95 transition-colors">
                       Order Now
                     </button>
                   </div>
@@ -346,7 +346,7 @@ const Home = () => {
       </section>
 
       {/* Stats Cards */}
-      <section className="py-20 bg-coffee-900 text-cream-50">
+      <section className="py-20 bg-[#1d4e1a] text-cream-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Impact</h2>
@@ -364,7 +364,7 @@ const Home = () => {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="text-center bg-coffee-800 rounded-xl p-6 hover:bg-coffee-700 transition-colors"
+                className="text-center bg-[#1d4e2a] rounded-xl p-6 opacity-95  transition-colors"
               >
                 <stat.icon className="h-12 w-12 text-gold-400 mx-auto mb-4" />
                 <div className="text-4xl font-bold text-gold-400 mb-2">
@@ -390,13 +390,13 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/locations"
-              className="bg-coffee-900 hover:bg-coffee-800 text-cream-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="bg-[#1d4e1a]  text-cream-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               Find Your Location
             </Link>
             <Link
               to="/menu"
-              className="border-2 border-coffee-900 text-coffee-900 hover:bg-coffee-900 hover:text-cream-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="border-2 border-coffee-900 text-coffee-900  px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               View Full Menu
             </Link>
