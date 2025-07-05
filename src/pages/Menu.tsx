@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import axios from "axios";
 
 // Coffee type
-interface CoffeeApp {
+interface Menyu {
   id: number;
   name: string;
   type: string;
@@ -13,8 +13,8 @@ interface CoffeeApp {
   image: string;
 }
 
-export default function CoffeeApp() {
-  const [coffees, setCoffees] = useState<Coffee[]>([]);
+export default function Menyu() {
+  const [coffees, setCoffees] = useState<Menyu[]>([]);
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("All");
 
