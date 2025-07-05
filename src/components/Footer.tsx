@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-coffee-900 text-cream-50">
+    <footer className="bg-[#1d4e1a] text-cream-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
@@ -72,7 +72,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-coffee-800 mt-8 pt-8 text-center">
+        <div className="border-t border-[#1d4e1a] mt-8 pt-8 text-center">
           <p className="text-cream-200 text-sm">
             © 2024 Brewhaus Coffee. All rights reserved. Made with ❤️ and lots
             of coffee.
