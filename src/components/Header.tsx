@@ -11,10 +11,7 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-[#1d4e1a] text-cream-50 sticky top-0 z-50 relative overflow-hidden rounded-b-[100px] shadow-md">
-      {/* iPhone-style Notch */}
-      <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-20 h-4 bg-[#0f2910] rounded-b-full z-40 shadow-inner shadow-black/30" />
-
+    <header className="bg-[#1d4e1a] text-cream-50 sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -38,17 +35,8 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Sign In, Coffee Menu & Mobile Menu Buttons */}
+          {/* Coffee Menu Button & Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            {/* Sign In Button */}
-            <Link
-              to="/signin"
-              className="bg-transparent border border-gold-400 text-gold-400 hover:bg-gold-500 hover:text-coffee-900 px-4 py-2 rounded-lg font-medium transition-colors"
-            >
-              Sign In
-            </Link>
-
-            {/* Coffee Menu Button */}
             <button
               onClick={() => setIsCoffeeMenuOpen(!isCoffeeMenuOpen)}
               className="bg-gold-500 hover:bg-gold-600 text-coffee-900 px-4 py-2 rounded-lg font-medium transition-colors flex items-center space-x-2"

@@ -44,7 +44,7 @@ export default function Hero() {
           <motion.img
             src="https://cdn.prod.website-files.com/67fcb54501dc826cf4f8bfe9/67fcd4c56b860fe106f68269_Black%20Coffee.avif"
             alt="Black Coffee"
-            className="w-28 h-40 object-cover rounded-xl shadow-md hidden md:block"
+            className="w-36 h-40 object-cover rounded-xl shadow-md hidden md:block"
             initial={{ rotate: -12, opacity: 0 }}
             animate={{ rotate: -6, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
