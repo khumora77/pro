@@ -11,7 +11,6 @@ import {
   Heart,
   Shield,
 } from "lucide-react";
-import Hero from "../components/hero/HeroSection";
 
 const Home = () => {
   return (
@@ -411,7 +410,6 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <Hero />
     </>
   );
 };
