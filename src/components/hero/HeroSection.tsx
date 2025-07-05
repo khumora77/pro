@@ -44,7 +44,7 @@ export default function Hero() {
           <motion.img
             src="https://cdn.prod.website-files.com/67fcb54501dc826cf4f8bfe9/67fcd4c56b860fe106f68269_Black%20Coffee.avif"
             alt="Black Coffee"
-            className="w-36 h-40 object-cover rounded-xl shadow-md hidden md:block"
+            className="w-[200px] h-[200px] object-cover rounded-xl shadow-md hidden md:block"
             initial={{ rotate: -12, opacity: 0 }}
             animate={{ rotate: -6, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -54,7 +54,7 @@ export default function Hero() {
           <motion.img
             src="https://cdn.prod.website-files.com/67fcb54501dc826cf4f8bfe9/67fcd4c5a407d033860da151_Espresso.avif"
             alt="Espresso"
-            className="w-36 h-52 object-cover rounded-xl shadow-lg z-10"
+            className="w-[400px] h-[400px] object-cover rounded-xl shadow-lg z-10"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
@@ -64,7 +64,7 @@ export default function Hero() {
           <motion.img
             src="https://cdn.prod.website-files.com/67fcb54501dc826cf4f8bfe9/67fcd4c5977f8055b117d3fa_Cold%20Brew.avif"
             alt="Cold Brew"
-            className="w-28 h-40 object-cover rounded-xl shadow-md hidden md:block"
+            className="w-[300px] h-[300px] object-cover rounded-xl shadow-md hidden md:block"
             initial={{ rotate: 12, opacity: 0 }}
             animate={{ rotate: 6, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
