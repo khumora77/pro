@@ -334,7 +334,7 @@ const About = () => {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="bg-coffee-800 rounded-xl p-6 hover:bg-coffee-700 transition-colors"
+                className="bg-[#1d4e1a] rounded-xl p-6 hover:bg-coffee-700 transition-colors"
               >
                 <stat.icon className="h-12 w-12 text-gold-400 mx-auto mb-4" />
                 <div className="text-4xl font-bold text-gold-400 mb-2">

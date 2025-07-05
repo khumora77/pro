@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapPin, Clock, Phone, Wifi, Car, CreditCard, Star, Users, Coffee } from 'lucide-react';
 
 const Locations = () => {

@@ -70,7 +70,7 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive(item.route)
-                      ? "text-gold-400 bg-coffee-800"
+                      ? "text-gold-400 bg-[#1d4e1a]"
                       : "text-cream-50 hover:bg-coffee-800"
                   }`}
                 >
@@ -84,7 +84,7 @@ const Header = () => {
 
       {/* Coffee Menu Overlay */}
       {isCoffeeMenuOpen && (
-        <div className="absolute top-16 inset-x-0 bg-coffee-800 border-t border-coffee-700 z-40">
+        <div className="absolute top-16 inset-x-0 bg-[#1d4e1a] border-t border-coffee-700 z-40">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-lg font-semibold text-cream-50">
