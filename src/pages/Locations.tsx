@@ -118,7 +118,7 @@ const Locations = () => {
   return (
     <div className="min-h-screen bg-cream-50">
       {/* Header */}
-      <section className="bg-coffee-900 text-cream-50 py-16">
+      <section className="bg-[#1d4e1a] text-cream-50 py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-4">Our Locations</h1>
           <p className="text-xl text-cream-200">
@@ -132,38 +132,49 @@ const Locations = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {locations.map((location) => (
-              <div key={location.id} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div 
+              <div
+                key={location.id}
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <div
                   className="h-48 bg-cover bg-center relative"
                   style={{ backgroundImage: `url(${location.image})` }}
                 >
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1">
                     <Star className="h-4 w-4 text-gold-500 fill-current" />
-                    <span className="text-sm font-medium text-coffee-900">{location.rating}</span>
-                    <span className="text-xs text-coffee-600">({location.reviews})</span>
+                    <span className="text-sm font-medium text-coffee-900">
+                      {location.rating}
+                    </span>
+                    <span className="text-xs text-coffee-600">
+                      ({location.reviews})
+                    </span>
                   </div>
                 </div>
-                
+
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-coffee-900 mb-3">{location.name}</h3>
-                  
+                  <h3 className="text-2xl font-bold text-coffee-900 mb-3">
+                    {location.name}
+                  </h3>
+
                   {/* Address */}
                   <div className="flex items-start space-x-3 mb-3">
                     <MapPin className="h-5 w-5 text-gold-500 mt-1 flex-shrink-0" />
                     <p className="text-coffee-600">{location.address}</p>
                   </div>
-                  
+
                   {/* Phone */}
                   <div className="flex items-center space-x-3 mb-4">
                     <Phone className="h-5 w-5 text-gold-500 flex-shrink-0" />
                     <p className="text-coffee-600">{location.phone}</p>
                   </div>
-                  
+
                   {/* Hours */}
                   <div className="mb-4">
                     <div className="flex items-center space-x-3 mb-2">
                       <Clock className="h-5 w-5 text-gold-500 flex-shrink-0" />
-                      <span className="font-semibold text-coffee-900">Hours:</span>
+                      <span className="font-semibold text-coffee-900">
+                        Hours:
+                      </span>
                     </div>
                     <div className="ml-8 space-y-1 text-coffee-600">
                       <div className="flex justify-between">
@@ -180,7 +191,7 @@ const Locations = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Specialties */}
                   <div className="mb-4">
                     <h4 className="font-semibold text-coffee-900 mb-2 flex items-center">
@@ -189,32 +200,40 @@ const Locations = () => {
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {location.specialties.map((specialty, index) => (
-                        <span key={index} className="bg-gold-100 text-gold-800 px-2 py-1 rounded text-sm">
+                        <span
+                          key={index}
+                          className="bg-gold-100 text-gold-800 px-2 py-1 rounded text-sm"
+                        >
                           {specialty}
                         </span>
                       ))}
                     </div>
                   </div>
-                  
+
                   {/* Features */}
                   <div className="mb-6">
-                    <h4 className="font-semibold text-coffee-900 mb-2">Features:</h4>
+                    <h4 className="font-semibold text-coffee-900 mb-2">
+                      Features:
+                    </h4>
                     <div className="grid grid-cols-2 gap-2">
                       {location.features.map((feature, index) => (
-                        <div key={index} className="flex items-center space-x-2 text-coffee-600">
+                        <div
+                          key={index}
+                          className="flex items-center space-x-2 text-coffee-600"
+                        >
                           {getFeatureIcon(feature)}
                           <span className="text-sm">{feature}</span>
                         </div>
                       ))}
                     </div>
                   </div>
-                  
+
                   {/* Action Buttons */}
                   <div className="flex space-x-3">
                     <button className="flex-1 bg-coffee-900 text-cream-50 py-3 rounded-lg hover:bg-coffee-800 transition-colors font-medium">
                       Get Directions
                     </button>
-                    <button className="flex-1 border-2 border-coffee-900 text-coffee-900 py-3 rounded-lg hover:bg-coffee-900 hover:text-cream-50 transition-colors font-medium">
+                    <button className="flex-1 border-2 border-coffee-900 text-coffee-900 py-3 rounded-lg hover:bg-[#1d4e1a] hover:text-cream-50 transition-colors font-medium">
                       Call Store
                     </button>
                   </div>
@@ -229,37 +248,47 @@ const Locations = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-coffee-900 mb-4">Why Our Locations Stand Out</h2>
-            <p className="text-xl text-coffee-600">Each location is designed with you in mind</p>
+            <h2 className="text-4xl font-bold text-coffee-900 mb-4">
+              Why Our Locations Stand Out
+            </h2>
+            <p className="text-xl text-coffee-600">
+              Each location is designed with you in mind
+            </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
                 icon: Users,
                 title: "Community Focused",
-                description: "Each location reflects the unique character of its neighborhood"
+                description:
+                  "Each location reflects the unique character of its neighborhood",
               },
               {
                 icon: Wifi,
                 title: "Work-Friendly",
-                description: "Free high-speed WiFi and comfortable seating for remote work"
+                description:
+                  "Free high-speed WiFi and comfortable seating for remote work",
               },
               {
                 icon: Coffee,
                 title: "Consistent Quality",
-                description: "Same exceptional coffee and service at every location"
+                description:
+                  "Same exceptional coffee and service at every location",
               },
               {
                 icon: Clock,
                 title: "Convenient Hours",
-                description: "Extended hours to fit your schedule, including early mornings"
-              }
+                description:
+                  "Extended hours to fit your schedule, including early mornings",
+              },
             ].map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="bg-cream-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                   <feature.icon className="h-12 w-12 text-gold-500 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-coffee-900 mb-2">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-coffee-900 mb-2">
+                    {feature.title}
+                  </h3>
                   <p className="text-coffee-600">{feature.description}</p>
                 </div>
               </div>
@@ -271,34 +300,46 @@ const Locations = () => {
       {/* Coming Soon */}
       <section className="py-16 bg-gradient-to-r from-gold-500 to-gold-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-coffee-900 mb-4">Coming Soon</h2>
+          <h2 className="text-4xl font-bold text-coffee-900 mb-4">
+            Coming Soon
+          </h2>
           <p className="text-xl text-coffee-800 mb-8">
             We're expanding! New locations opening in 2024
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { 
-                name: "Eastside Commons", 
+              {
+                name: "Eastside Commons",
                 date: "Spring 2024",
-                features: ["Drive-Through", "Outdoor Seating", "Event Space"]
+                features: ["Drive-Through", "Outdoor Seating", "Event Space"],
               },
-              { 
-                name: "Northgate Shopping", 
+              {
+                name: "Northgate Shopping",
                 date: "Summer 2024",
-                features: ["Family Area", "Kids Menu", "Play Zone"]
+                features: ["Family Area", "Kids Menu", "Play Zone"],
               },
-              { 
-                name: "Southpark District", 
+              {
+                name: "Southpark District",
                 date: "Fall 2024",
-                features: ["Roastery Tours", "Coffee Classes", "Tasting Room"]
-              }
+                features: ["Roastery Tours", "Coffee Classes", "Tasting Room"],
+              },
             ].map((location, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <h3 className="text-xl font-semibold text-coffee-900 mb-2">{location.name}</h3>
-                <p className="text-gold-600 font-medium mb-3">Opening {location.date}</p>
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              >
+                <h3 className="text-xl font-semibold text-coffee-900 mb-2">
+                  {location.name}
+                </h3>
+                <p className="text-gold-600 font-medium mb-3">
+                  Opening {location.date}
+                </p>
                 <div className="space-y-1">
                   {location.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-coffee-600">
+                    <div
+                      key={idx}
+                      className="flex items-center text-sm text-coffee-600"
+                    >
                       <div className="w-2 h-2 bg-gold-500 rounded-full mr-2"></div>
                       {feature}
                     </div>

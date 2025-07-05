@@ -83,7 +83,7 @@ const News = () => {
   return (
     <div className="min-h-screen bg-cream-50">
       {/* Header */}
-      <section className="bg-coffee-900 text-cream-50 py-16">
+      <section className="bg-[#1d4e1a] text-cream-50 py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-4">Latest News</h1>
           <p className="text-xl text-cream-200">
@@ -129,7 +129,7 @@ const News = () => {
                         </span>
                       </div>
                     </div>
-                    <button className="bg-coffee-900 text-cream-50 px-6 py-2 rounded-lg hover:bg-coffee-800 transition-colors flex items-center space-x-2">
+                    <button className="bg-[#1d4e1a] text-cream-50 px-6 py-2 rounded-lg hover:bg-[#1d4e3a] transition-colors flex items-center space-x-2">
                       <span>Read More</span>
                       <ArrowRight className="h-4 w-4" />
                     </button>
@@ -187,7 +187,7 @@ const News = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-16 bg-coffee-900 text-cream-50">
+      <section className="py-16 bg-[#1d4e1a] text-cream-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Stay in the Loop</h2>
           <p className="text-xl text-cream-200 mb-8">
