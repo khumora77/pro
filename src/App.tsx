@@ -16,7 +16,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/menu" element={<Menyu />} />
+            <Route path="/menyu" element={<Menyu />} />
             <Route path="/about" element={<About />} />
             <Route path="/locations" element={<Locations />} />
             <Route path="/news" element={<News />} />
