@@ -2,24 +2,24 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <main className="w-full bg-[#f9f3ec] py-16 px-4 md:px-20">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-10">
-        {/* Text Section */}
+    <main className="w-full h-[800px] bg-[#f9f3ec] py-16 px-4 md:px-20 flex items-center">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+        {/* Left: Text */}
         <motion.div
-          className="flex-1 space-y-6"
-          initial={{ x: -100, opacity: 0 }}
+          initial={{ x: -80, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
+          className="space-y-6 text-center lg:text-left"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
             Life Begins After Coffee
           </h1>
-          <p className="text-gray-600 text-lg">
+          <p className="text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
             Because great coffee is the start of something even greater.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
             <a
-              href="/menu"
+              href="/menyu"
               className="bg-[#dbc4a1] text-gray-900 px-6 py-3 rounded-xl font-medium hover:bg-[#c9b089] transition"
             >
               Explore Menu
@@ -33,44 +33,42 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Images Section */}
+        {/* Right: Images */}
         <motion.div
-          className="flex-1 flex items-center justify-center relative"
-          initial={{ x: 100, opacity: 0 }}
+          initial={{ x: 80, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
+          className="relative flex justify-center items-center gap-4"
         >
-          <div className="relative w-[300px] h-[360px] flex items-center justify-center">
-            {/* Left Rotated Image */}
-            <motion.img
-              src="https://cdn.prod.website-files.com/67fcb54501dc826cf4f8bfe9/67fcd4c56b860fe106f68269_Black%20Coffee.avif"
-              alt="Black Coffee"
-              className="w-32 h-44 object-cover rounded-xl absolute left-0 top-12 shadow-md"
-              initial={{ rotate: -15, opacity: 0 }}
-              animate={{ rotate: -7, opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-            />
+          {/* Left image */}
+          <motion.img
+            src="https://cdn.prod.website-files.com/67fcb54501dc826cf4f8bfe9/67fcd4c56b860fe106f68269_Black%20Coffee.avif"
+            alt="Black Coffee"
+            className="w-28 h-40 object-cover rounded-xl shadow-md hidden md:block"
+            initial={{ rotate: -12, opacity: 0 }}
+            animate={{ rotate: -6, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          />
 
-            {/* Center Main Image */}
-            <motion.img
-              src="https://cdn.prod.website-files.com/67fcb54501dc826cf4f8bfe9/67fcd4c5a407d033860da151_Espresso.avif"
-              alt="Espresso"
-              className="w-40 h-56 object-cover rounded-xl z-10 shadow-xl"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-            />
+          {/* Center image */}
+          <motion.img
+            src="https://cdn.prod.website-files.com/67fcb54501dc826cf4f8bfe9/67fcd4c5a407d033860da151_Espresso.avif"
+            alt="Espresso"
+            className="w-36 h-52 object-cover rounded-xl shadow-lg z-10"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          />
 
-            {/* Right Rotated Image */}
-            <motion.img
-              src="https://cdn.prod.website-files.com/67fcb54501dc826cf4f8bfe9/67fcd4c5977f8055b117d3fa_Cold%20Brew.avif"
-              alt="Cold Brew"
-              className="w-32 h-44 object-cover rounded-xl absolute right-0 top-12 shadow-md"
-              initial={{ rotate: 15, opacity: 0 }}
-              animate={{ rotate: 7, opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-            />
-          </div>
+          {/* Right image */}
+          <motion.img
+            src="https://cdn.prod.website-files.com/67fcb54501dc826cf4f8bfe9/67fcd4c5977f8055b117d3fa_Cold%20Brew.avif"
+            alt="Cold Brew"
+            className="w-28 h-40 object-cover rounded-xl shadow-md hidden md:block"
+            initial={{ rotate: 12, opacity: 0 }}
+            animate={{ rotate: 6, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          />
         </motion.div>
       </div>
     </main>

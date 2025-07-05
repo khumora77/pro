@@ -1,60 +1,22 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import {
   Coffee,
   Award,
   Users,
   Leaf,
-  ArrowRight,
   Star,
   Clock,
   Heart,
   Shield,
 } from "lucide-react";
+import Hero from "../components/hero/HeroSection";
 
 const Home = () => {
   return (
     <>
       <div className="overflow-hidden">
         {/* Hero Section */}
-        <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-coffee-900 to-coffee-800">
-          <div className="absolute inset-0 bg-black/30"></div>
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080')",
-            }}
-          ></div>
-
-          <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Crafted with
-              <span className="text-gold-400 block">Passion</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-cream-100 max-w-2xl mx-auto">
-              Experience the perfect blend of exceptional coffee, warm
-              atmosphere, and community connection
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/menu"
-                className="bg-gold-500 hover:bg-gold-600 text-coffee-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors flex items-center justify-center space-x-2"
-              >
-                <Coffee className="h-5 w-5" />
-                <span>Explore Menu</span>
-              </Link>
-              <Link
-                to="/locations"
-                className="border-2 border-cream-50 text-cream-50 hover:bg-cream-50 hover:text-coffee-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors flex items-center justify-center space-x-2"
-              >
-                <span>Find Location</span>
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </section>
-
+        <Hero />
         {/* Features Section */}
         <section className="py-20 bg-cream-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -7,14 +7,13 @@ import Locations from "./pages/Locations";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
 import Menyu from "./pages/Menu";
-import Hero from "./components/hero/HeroSection";
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-cream-50">
         <Header />
-        <Hero />
+     
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
